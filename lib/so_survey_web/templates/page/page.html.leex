@@ -1,0 +1,90 @@
+<div class="bg-img">
+  <div class="row justify-content-center" style="margin-top: 5%" >
+    <div class="col-lg-6">
+      <div class="card" style="opacity: 0.7; color: black; background-color: white; border-radius: 2%;">
+        <div class="card-header" style="background-color: cadetblue">
+          Provide your personal details
+        </div>
+        <div class="card-body">
+         <%= f = form_for :dev_info, "#", phx_submit: "dev_choice" %>
+          <div class="row" >
+            <div class="col-6">
+              <h5>My dev role(s) is:</h5>
+            </div>
+            <div class="col-6">
+              <%= multiple_select f, :dev_type, @dev_type_list, class: "form-fields" %>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 2%">
+            <div class="col-6">
+              <h5>Select the employment type:</h5>
+            </div>
+            <div class="col-6 ">
+              <%= select f, :employment_type, @employment_variants, class: "form-fields" %>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 2%">
+            <div class="col-6">
+              <h5>I am from:</h5>
+            </div>
+            <div class="col-6 ">
+              <%= select f, :country, @countries, class: "form-fields" %>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 2%">
+            <div class="col-6">
+              <h5>Select the coding language(s):</h5>
+            </div>
+            <div class="col-6 ">
+              <%= multiple_select f, :languages, @languages_list, class: "form-fields" %>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 2%">
+            <div class="col-6">
+              <h5>My coding experience is (in years):</h5>
+            </div>
+            <div class="col-6 ">
+              <%= text_input f, :years_code, class: "form-fields" %>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 2%">
+            <div class="col-6">
+              <h5>My professional coding experience is (in years):</h5>
+            </div>
+            <div class="col-6 ">
+              <%= text_input f, :years_code_pro, class: "form-fields" %>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 2%">
+            <div class="col-6">
+              <h5>My gender:</h5>
+            </div>
+            <div class="col-6 ">
+              <%= select f, :gender, @genders, class: "form-fields" %>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 2%">
+            <div class="col-6">
+              <h5>How old are you?</h5>
+            </div>
+            <div class="col-6 ">
+              <%= text_input f, :age, class: "form-fields" %>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 2%">
+            <div class="col-6">
+              <h5>What is your educational level?</h5>
+            </div>
+            <div class="col-6 ">
+              <%= select f, :ed_level, @ed_levels, class: "form-fields" %>
+            </div>
+          </div>
+          <p class="row justify-content-center">
+            <%= submit "Explore", class: "col-lg-2 sbm-bt" %>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
