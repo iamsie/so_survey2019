@@ -139,9 +139,14 @@ defmodule SoSurveyWeb.PageLive do
       |> assign(:comp_by_ed_level_and_years_code_pro, comp_by_ed_level_and_years_code_pro)
       |> assign(:comp_by_country_and_lang_worked_with, comp_by_country_and_lang_worked_with)
 
-    # SoSurveyWeb.ChartsLive.mount(socket)
-    # {:noreply, push_redirect(socket, to: "/stats")}
     {:noreply, socket}
-    # {:noreply, push_patch(socket, to: "/")}
+  end
+
+  def handle_params(params, _uri, socket) do
+    socket =
+      socket
+      |> assign(:template, "index")
+
+    {:noreply, socket}
   end
 end

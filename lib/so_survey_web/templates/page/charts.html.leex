@@ -1,8 +1,9 @@
 <nav class="navbar sticky-top nb-style">
-  <a class="navbar-brand" >Return back to form</a>
+  <%= live_patch "Return back to form", to: Routes.live_path(@socket, SoSurveyWeb.PageLive), class: "navbar-brand nb-style nb-text" %>
 </nav>
+<div class="container-fluid">
 <div class="row justify-content-around" style="margin-top: 1%">
-<div class="col-12 col-md-5">
+<div class="col-11 col-xl-5">
   <div class="card">
   <div class="card-header bc"> What Undergraduate Major do the developers of the same type have? </div>
   <div class="card-body">
@@ -34,7 +35,7 @@
     </div>
   </div>
   </div>
-  <div class="col-12 col-md-5">
+  <div class="col-11 col-xl-5">
    <div class="card">
   <cdiv class="card-header bc"> What other types of education do the developers of the same type have? </cdiv>
    <div class="card-body">
@@ -67,5 +68,5 @@
   </div>
   </div>
 </div>
-
+</div>
 

@@ -1,17 +1,15 @@
 import React from "react";
 
-import { Bar } from "@nivo/bar";
+import { ResponsiveBarCanvas } from "@nivo/bar";
 
-const Chart = ({ metric, dimension, data }) => {
+const Bar = ({ metric, dimension, data }) => {
   console.log(data);
   return (
-    <Bar
+    <ResponsiveBarCanvas
       data={data}
       keys={[metric]}
-      height={400}
-      width={600}
       indexBy={dimension}
-      margin={{ top: 30, right: 0, bottom: 50, left: 60 }}
+      margin={{ top: 10, right: 0, bottom: 10, left: 10 }}
       padding={0.3}
       colors={{ scheme: "pastel2" }}
       colorBy="index"
@@ -24,6 +22,14 @@ const Chart = ({ metric, dimension, data }) => {
       motionStiffness={90}
       motionDamping={15}
     />
+  );
+};
+
+const Chart = ({ metric, dimension, data }) => {
+  return (
+    <div style={{ height: 400 }}>
+      <Bar data={data} metric={metric} dimension={dimension} />
+    </div>
   );
 };
 
