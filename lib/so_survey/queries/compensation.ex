@@ -146,6 +146,7 @@ defmodule SoSurvey.Queries.Compensation do
       language_worked_with: s.language_worked_with,
       compensation: avg(s.converted_comp)
     })
+    |> order_by([s], desc: avg(s.converted_comp))
     |> limit([s], 7)
   end
 end

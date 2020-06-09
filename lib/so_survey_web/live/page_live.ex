@@ -118,9 +118,15 @@ defmodule SoSurveyWeb.PageLive do
           String.to_integer(params["years_code_pro"])
         )
       )
+      |> Enum.map(fn %{compensation: fl, dev_type: str} ->
+        %{compensation: round(fl), dev_type: str}
+      end)
 
     comp_by_country_and_lang_worked_with =
       Repo.all(Compensation.comp_level_by_country_and_lang_worked_with(params["country"]))
+      |> Enum.map(fn %{compensation: fl, language_worked_with: str} ->
+        %{compensation: round(fl), language_worked_with: str}
+      end)
 
     socket =
       socket

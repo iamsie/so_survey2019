@@ -2,7 +2,7 @@
   <div class="row justify-content-center" style="padding: 5% 0; min-height: 100vh;" >
     <div class="col-11 col-lg-6">
       <div class="card" style="opacity: 0.7; color: black; background-color: white; border-radius: 2%;">
-        <div class="card-header" style="background-color: cadetblue">
+        <div class="card-header" style="background-color: cadetblue; color: white">
           Provide your personal details
         </div>
         <div class="card-body">
@@ -17,7 +17,7 @@
           </div>
           <div class="row" style="margin-top: 2%">
             <div class="col-12 col-lg-6">
-              <h5>Select the employment type:</h5>
+              <h5>My employment type is:</h5>
             </div>
             <div class="col-12 col-lg-6 ">
               <%= select f, :employment_type, @employment_variants, class: "form-fields" %>
@@ -33,7 +33,7 @@
           </div>
           <div class="row" style="margin-top: 2%">
             <div class="col-12 col-lg-6">
-              <h5>Select the coding language(s):</h5>
+              <h5>My coding language(s):</h5>
             </div>
             <div class="col-12 col-lg-6 ">
               <%= multiple_select f, :languages, @languages_list, class: "form-fields" %>
@@ -57,7 +57,7 @@
           </div>
           <div class="row" style="margin-top: 2%">
             <div class="col-12 col-lg-6">
-              <h5>My gender:</h5>
+              <h5>My gender is:</h5>
             </div>
             <div class="col-12 col-lg-6 ">
               <%= select f, :gender, @genders, class: "form-fields" %>
@@ -73,7 +73,7 @@
           </div>
           <div class="row" style="margin-top: 2%">
             <div class="col-12 col-lg-6">
-              <h5>What is your educational level?</h5>
+              <h5>My educational level is:</h5>
             </div>
             <div class="col-12 col-lg-6 ">
               <%= select f, :ed_level, @ed_levels, class: "form-fields" %>
