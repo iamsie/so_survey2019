@@ -1,18 +1,9 @@
 # SoSurvey
+## About
+Here, you can compare yourself with other developers. For example, how much does an average developer with the same education as yours earn? How the gender can influence the salary? What is the undergraduate major of the vast majority of developers? 
 
-To start your Phoenix server:
+To find the answers to these and more questions, just visit the site: http://88.218.28.126:4003/, and provide some basic personal information. This information does not inserted to the database and only used for charts building. 
 
-  * Setup the project with `mix setup`
-  * Start Phoenix endpoint with `mix phx.server`
+![](http://dl4.joxi.net/drive/2020/06/11/0012/0851/820051/51/fea3748e5a.png)
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+The data is based on the StackOverflow survey 2019. 
