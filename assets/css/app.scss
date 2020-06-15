@@ -158,3 +158,426 @@ nav a:hover {
 .alert:empty {
   display: none;
 }
+
+.fxt-template-layout4 {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.fxt-template-layout4:before {
+  position: absolute;
+  z-index: 0;
+  background-color: cadetblue;
+  content: "";
+  min-height: 100%;
+  width: 35vw;
+  top: 0;
+  left: 0;
+}
+.fxt-template-layout4 .fxt-bg-wrap {
+  padding: 8vh 0 8vh 16vw;
+  min-height: 100vh;
+}
+@media only screen and (max-width: 1199px) {
+  .fxt-template-layout4 .fxt-bg-wrap {
+    padding: 8vh 0 8vh 10vw;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .fxt-template-layout4 .fxt-bg-wrap {
+    padding: 6vh 0 6vh 6vw;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .fxt-template-layout4 .fxt-bg-wrap {
+    padding: 5vh 4vw;
+  }
+}
+.fxt-template-layout4 .fxt-checkbox-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.fxt-template-layout4 .fxt-bg-color {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 45px;
+}
+@media only screen and (max-width: 991px) {
+  .fxt-template-layout4 .fxt-bg-color {
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .fxt-template-layout4 .fxt-bg-color {
+    min-height: 100%;
+    padding: 20px 30px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+.fxt-template-layout4 .fxt-bg-img {
+  padding: 40px 50px;
+  min-height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (max-width: 991px) {
+  .fxt-template-layout4 .fxt-bg-img {
+    padding: 30px 20px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .fxt-template-layout4 .fxt-bg-img {
+    padding: 30px;
+  }
+}
+.fxt-template-layout4 .fxt-bg-img:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  // background-color: whitesmoke;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 0;
+}
+.fxt-template-layout4 .fxt-bg-img:after {
+  content: "";
+  right: 0;
+  top: 20%;
+  position: absolute;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-right: 20px solid #fff;
+  border-bottom: 15px solid transparent;
+}
+.fxt-template-layout4 .fxt-header {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+.fxt-template-layout4 .fxt-header .fxt-logo {
+  display: block;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40vw;
+}
+.fxt-template-layout4 .fxt-header h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 991px) {
+  .fxt-template-layout4 .fxt-header h1 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .fxt-template-layout4 .fxt-header h1 {
+    font-size: 28px;
+  }
+}
+.fxt-template-layout4 .fxt-header p {
+  color: #fff;
+}
+.fxt-template-layout4 .fxt-content {
+  padding: 30px;
+  max-width: 460px;
+  width: 100%;
+}
+@media only screen and (max-width: 1199px) {
+  .fxt-template-layout4 .fxt-content {
+    padding: 0;
+  }
+}
+.fxt-template-layout4 .fxt-form {
+  margin-top: 30px;
+}
+.fxt-template-layout4 .fxt-form h2 {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.fxt-template-layout4 .fxt-form p {
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+.fxt-template-layout4 .fxt-form .form-group {
+  position: relative;
+  z-index: 1;
+}
+.fxt-template-layout4 .fxt-form .form-group .field-icon {
+  position: absolute;
+  z-index: 1;
+  right: 24px;
+  bottom: 18px;
+  padding: 0 5px;
+  color: #c5c5c5;
+  font-size: 14px;
+}
+.fxt-template-layout4 .fxt-form .form-group .field-icon:before {
+  padding: 17px 10px;
+}
+.fxt-template-layout4 .fxt-form .form-control {
+  min-height: 40px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px 30px 10px 0;
+  color: #111;
+}
+.fxt-template-layout4 .fxt-form input::-webkit-input-placeholder {
+  color: #a1a1a1;
+  font-size: 15px;
+  font-weight: 300;
+}
+.fxt-template-layout4 .fxt-form input::-moz-placeholder {
+  color: #a1a1a1;
+  font-size: 15px;
+  font-weight: 300;
+}
+.fxt-template-layout4 .fxt-form input:-moz-placeholder {
+  color: #a1a1a1;
+  font-size: 15px;
+  font-weight: 300;
+}
+.fxt-template-layout4 .fxt-form input:-ms-input-placeholder {
+  color: #a1a1a1;
+  font-size: 15px;
+  font-weight: 300;
+}
+.fxt-template-layout4 .fxt-btn-fill {
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 500;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  border: 0;
+  color: #fff;
+  border-radius: 3px;
+  background-color: cadetblue;
+  padding: 10px 36px;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.fxt-template-layout4 .fxt-btn-fill:hover {
+  background-color: cadetblue;
+  border-color: cadetblue;
+}
+.fxt-template-layout4 .fxt-btn-fill:focus {
+  outline: none;
+}
+.fxt-template-layout4 ul.fxt-socials {
+  text-align: center;
+}
+.fxt-template-layout4 ul.fxt-socials li {
+  display: inline-block;
+  margin-right: 4px;
+}
+@media only screen and (max-width: 575px) {
+  .fxt-template-layout4 ul.fxt-socials li {
+    margin-right: 2px;
+  }
+}
+.fxt-template-layout4 ul.fxt-socials li:last-child {
+  margin-right: 0;
+}
+.fxt-template-layout4 ul.fxt-socials li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 14px;
+  height: 40px;
+  width: 40px;
+  color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-facebook a {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-facebook a:hover {
+  background-color: transparent;
+  color: #3b5998;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-twitter a {
+  background-color: #00acee;
+  border-color: #00acee;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-twitter a:hover {
+  background-color: transparent;
+  color: #00acee;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-google a {
+  background-color: #cc3333;
+  border-color: #cc3333;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-google a:hover {
+  background-color: transparent;
+  color: #cc3333;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-instagram a {
+  background-color: #3f729b;
+  border-color: #3f729b;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-instagram a:hover {
+  background-color: transparent;
+  color: #3f729b;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-linkedin a {
+  background-color: #0077b5;
+  border-color: #0077b5;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-linkedin a:hover {
+  background-color: transparent;
+  color: #0077b5;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-youtube a {
+  background-color: #c4302b;
+  border-color: #c4302b;
+}
+.fxt-template-layout4 ul.fxt-socials li.fxt-youtube a:hover {
+  background-color: transparent;
+  color: #c4302b;
+}
+.fxt-template-layout4 .switcher-text {
+  color: #55d1ff;
+  font-size: 15px;
+  margin-left: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.fxt-template-layout4 .switcher-text:last-child {
+  margin-right: 0;
+}
+.fxt-template-layout4 .switcher-text:hover {
+  color: #666;
+}
+.fxt-template-layout4 .switcher-text.active {
+  color: #666;
+}
+.fxt-template-layout4 .checkbox {
+  padding-left: 5px;
+}
+.fxt-template-layout4 .checkbox label {
+  padding-left: 20px;
+  color: #a4a4a4;
+  margin-bottom: 0;
+  font-size: 15px;
+  position: relative;
+}
+.fxt-template-layout4 .checkbox label:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 4px;
+  left: 0;
+  margin-left: -5px;
+  border: 1px solid;
+  border-color: #dcdcdc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.fxt-template-layout4 .checkbox label:after {
+  position: absolute;
+  margin-left: -20px;
+  padding-left: 3px;
+  font-size: 10px;
+  color: #555555;
+}
+.fxt-template-layout4 .checkbox input[type="checkbox"] {
+  display: none;
+}
+.fxt-template-layout4 .checkbox input[type="checkbox"]:checked + label::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  color: #ffffff;
+  left: 15px;
+  top: 4px;
+}
+.fxt-template-layout4 .checkbox input[type="checkbox"]:checked + label::before {
+  background-color: cadetblue;
+  border-color: cadetblue;
+}
+.fxt-template-layout4 .fxt-footer {
+  text-align: center;
+}

@@ -27,8 +27,8 @@ defmodule SoSurvey.Queries.Technology do
     |> subquery()
     |> group_by([s], s.database_worked_with)
     |> select([s], %{
-      database_worked_with: s.database_worked_with,
-      number_of_developers: count(s.id)
+      "Database" => s.database_worked_with,
+      "Number of developers" => count(s.id)
     })
     |> order_by([s], desc: count(s.id))
   end
@@ -56,8 +56,8 @@ defmodule SoSurvey.Queries.Technology do
     |> subquery()
     |> group_by([s], s.platform_worked_with)
     |> select([s], %{
-      platform_worked_with: s.platform_worked_with,
-      number_of_developers: count(s.id)
+      "Platform" => s.platform_worked_with,
+      "Number of developers" => count(s.id)
     })
     |> order_by([s], desc: count(s.id))
   end
@@ -85,8 +85,8 @@ defmodule SoSurvey.Queries.Technology do
     |> subquery()
     |> group_by([s], s.web_frame_worked_with)
     |> select([s], %{
-      web_frame_worked_with: s.web_frame_worked_with,
-      number_of_developers: count(s.id)
+      "Web framework" => s.web_frame_worked_with,
+      "Number of developers" => count(s.id)
     })
     |> order_by([s], desc: count(s.id))
   end
@@ -114,8 +114,8 @@ defmodule SoSurvey.Queries.Technology do
     |> subquery()
     |> group_by([s], s.misc_tech_worked_with)
     |> select([s], %{
-      misc_tech_worked_with: s.misc_tech_worked_with,
-      number_of_developers: count(s.id)
+      "Techs" => s.misc_tech_worked_with,
+      "Number of developers" => count(s.id)
     })
     |> order_by([s], desc: count(s.id))
   end

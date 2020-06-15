@@ -7,31 +7,31 @@
   <div class="card">
   <div class="card-header bc"> What Undergraduate Major do the developers of the same type have? </div>
   <div class="card-body">
-  <%= live_react_component("Components.Chart", %{data: @ed_level, dimension: "ed_level", metric: "number_of_developers"}) %>
+  <%= live_react_component("Components.Chart", %{data: @undergrad_major, dimension: "Undergraduate major", metric: "Number of developers"}) %>
   </div>
   </div>
    <div class="card mt-5">
   <div class="card-header bc"> What is the average salary of remote and office coders with the same developer types? </div>
    <div class="card-body">
-  <%= live_react_component("Components.Chart", %{data: @comp_by_work_type, dimension: "employment", metric: "compensation"}) %>
+  <%= live_react_component("Components.Chart", %{data: @comp_by_work_type, dimension: "Employment", metric: "Compensation"}) %>
    </div>
   </div>
    <div class="card mt-5">
   <div class="card-header bc" > How much the developers in your country earn? </div>
    <div class="card-body">
-  <%= live_react_component("Components.Chart", %{data: @comp_by_country_and_lang_worked_with, dimension: "language_worked_with", metric: "compensation"}) %>
+  <%= live_react_component("Components.Chart", %{data: @comp_by_country_and_lang_worked_with, dimension: "Language", metric: "Compensation"}) %>
    </div>
   </div>
    <div class="card mt-5">
   <div class="card-header bc"> What is the most popular database used by the developers of your types? </div>
    <div class="card-body">
-  <%= live_react_component("Components.Chart", %{data: @db_worked_with, dimension: "database_worked_with", metric: "number_of_developers"}) %>
+  <%= live_react_component("Components.Chart", %{data: @db_worked_with, dimension: "Database", metric: "Number of developers"}) %>
    </div>
   </div>
    <div class="card mt-5">
   <div class="card-header bc" > What is the most popular web framework used by the developers of your types? </div>
    <div class="card-body">
-   <%= live_react_component("Components.Chart", %{data: @web_frame_worked_with, dimension: "web_frame_worked_with", metric: "number_of_developers"}) %>
+   <%= live_react_component("Components.Chart", %{data: @web_frame_worked_with, dimension: "Web framework", metric: "Number of developers"}) %>
     </div>
   </div>
   </div>
@@ -39,31 +39,31 @@
    <div class="card">
   <div class="card-header bc"> What other types of education do the developers of the same type have? </div>
    <div class="card-body">
-  <%= live_react_component("Components.Chart", %{data: @ed_other, dimension: "ed_other", metric: "number_of_developers"}) %>
+  <%= live_react_component("Components.Chart", %{data: @ed_other, dimension: "Non-formal education", metric: "Number of developers"}) %>
    </div>
   </div>
    <div class="card mt-5">
   <div class="card-header bc"> How much the developers of the same degree level and years of pro coding earn? </div>
    <div class="card-body">
-    <%= live_react_component("Components.Chart", %{data: @comp_by_ed_level_and_years_code_pro, dimension: "dev_type", metric: "compensation"}) %>
+    <%= live_react_component("Components.Chart", %{data: @comp_by_ed_level_and_years_code_pro, dimension: "Developer", metric: "Compensation"}) %>
      </div>
   </div>
      <div class="card mt-5">
   <div class="card-header bc"> How much the developers of the same type earn by gender? </div>
    <div class="card-body">
-  <%= live_react_component("Components.Chart", %{data: @comp_by_dev_type_and_gender, dimension: "gender", metric: "compensation"}) %>
+  <%= live_react_component("Components.Chart", %{data: @comp_by_dev_type_and_gender, dimension: "Gender", metric: "Compensation"}) %>
    </div>
   </div>
    <div class="card mt-5">
   <div class="card-header bc"> What is the most popular platform used by the developers of your types? </div>
    <div class="card-body">
-  <%= live_react_component("Components.Chart", %{data: @platform_worked_with, dimension: "platform_worked_with", metric: "number_of_developers"}) %>
+  <%= live_react_component("Components.Chart", %{data: @platform_worked_with, dimension: "Platform", metric: "Number of developers"}) %>
    </div>
   </div>
    <div class="card mt-5 mb-5">
 <div class="card-header bc" > What other technologies do the developers of your types use? </div>
  <div class="card-body">
-  <%= live_react_component("Components.Chart", %{data: @other_techs_worked_with, dimension: "misc_tech_worked_with", metric: "number_of_developers"}) %>
+  <%= live_react_component("Components.Chart", %{data: @other_techs_worked_with, dimension: "Techs", metric: "Number of developers"}) %>
    </div>
   </div>
   </div>

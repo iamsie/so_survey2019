@@ -95,20 +95,20 @@ defmodule SoSurveyWeb.PageLive do
           String.to_integer(params["years_code_pro"])
         )
       )
-      |> Enum.map(fn %{compensation: fl, dev_type: str} ->
-        %{compensation: round(fl), dev_type: str}
+      |> Enum.map(fn %{"Compensation" => fl, "Developer" => str} ->
+        %{"Compensation" => round(fl), "Developer" => str}
       end)
 
     comp_by_work_type =
       Repo.all(Compensation.comp_by_work_type(params["dev_type"]))
-      |> Enum.map(fn %{compensation: fl, employment: str} ->
-        %{compensation: round(fl), employment: str}
+      |> Enum.map(fn %{"Compensation" => fl, "Employment" => str} ->
+        %{"Compensation" => round(fl), "Employment" => str}
       end)
 
     comp_by_dev_type_and_gender =
       Repo.all(Compensation.comp_by_dev_type_and_gender(params["dev_type"]))
-      |> Enum.map(fn %{compensation: fl, gender: str} ->
-        %{compensation: round(fl), gender: str}
+      |> Enum.map(fn %{"Compensation" => fl, "Gender" => str} ->
+        %{"Compensation" => round(fl), "Gender" => str}
       end)
 
     comp_by_ed_level_and_years_code_pro =
@@ -118,14 +118,14 @@ defmodule SoSurveyWeb.PageLive do
           String.to_integer(params["years_code_pro"])
         )
       )
-      |> Enum.map(fn %{compensation: fl, dev_type: str} ->
-        %{compensation: round(fl), dev_type: str}
+      |> Enum.map(fn %{"Compensation" => fl, "Developer" => str} ->
+        %{"Compensation" => round(fl), "Developer" => str}
       end)
 
     comp_by_country_and_lang_worked_with =
       Repo.all(Compensation.comp_level_by_country_and_lang_worked_with(params["country"]))
-      |> Enum.map(fn %{compensation: fl, language_worked_with: str} ->
-        %{compensation: round(fl), language_worked_with: str}
+      |> Enum.map(fn %{"Compensation" => fl, "Language" => str} ->
+        %{"Compensation" => round(fl), "Language" => str}
       end)
 
     socket =

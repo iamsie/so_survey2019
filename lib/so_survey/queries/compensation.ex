@@ -30,7 +30,7 @@ defmodule SoSurvey.Queries.Compensation do
     distinct_ids
     |> subquery()
     |> group_by([s], s.dev_type)
-    |> select([s], %{dev_type: s.dev_type, compensation: avg(s.converted_comp)})
+    |> select([s], %{"Developer" => s.dev_type, "Compensation" => avg(s.converted_comp)})
     |> order_by([s], desc: avg(s.converted_comp))
   end
 
@@ -63,8 +63,8 @@ defmodule SoSurvey.Queries.Compensation do
     |> subquery()
     |> group_by([s], s.employment)
     |> select([s], %{
-      employment: s.employment,
-      compensation: avg(s.converted_comp)
+      "Employment" => s.employment,
+      "Compensation" => avg(s.converted_comp)
     })
     |> order_by([s], desc: avg(s.converted_comp))
   end
@@ -98,8 +98,8 @@ defmodule SoSurvey.Queries.Compensation do
     |> subquery()
     |> group_by([s], s.gender)
     |> select([s], %{
-      gender: s.gender,
-      compensation: avg(s.converted_comp)
+      "Gender" => s.gender,
+      "Compensation" => avg(s.converted_comp)
     })
     |> order_by([s], desc: avg(s.converted_comp))
   end
@@ -121,7 +121,7 @@ defmodule SoSurvey.Queries.Compensation do
     query
     |> subquery()
     |> group_by([s], s.dev_type)
-    |> select([s], %{dev_type: s.dev_type, compensation: avg(s.converted_comp)})
+    |> select([s], %{"Developer" => s.dev_type, "Compensation" => avg(s.converted_comp)})
     |> order_by([s], desc: avg(s.converted_comp))
     |> limit([s], 7)
   end
@@ -143,8 +143,8 @@ defmodule SoSurvey.Queries.Compensation do
     |> subquery()
     |> group_by([s], s.language_worked_with)
     |> select([s], %{
-      language_worked_with: s.language_worked_with,
-      compensation: avg(s.converted_comp)
+      "Language" => s.language_worked_with,
+      "Compensation" => avg(s.converted_comp)
     })
     |> order_by([s], desc: avg(s.converted_comp))
     |> limit([s], 7)

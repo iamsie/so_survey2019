@@ -10,7 +10,7 @@ defmodule SoSurvey.Queries.Education do
     |> where([s], s.years_code_pro == ^years_code_pro)
     |> where([s], not is_nil(s.open_sourcer))
     |> group_by([s], s.open_sourcer)
-    |> select([s], %{contribution: s.open_sourcer, number_of_developers: count(s.id)})
+    |> select([s], %{"Contribution" => s.open_sourcer, "Number of developers" => count(s.id)})
     |> order_by([s], desc: count(s.id))
   end
 
@@ -37,7 +37,7 @@ defmodule SoSurvey.Queries.Education do
     distinct_ids
     |> subquery()
     |> group_by([s], s.ed_level)
-    |> select([s], %{ed_level: s.ed_level, number_of_developers: count(s.id)})
+    |> select([s], %{"Educational level" => s.ed_level, "Number of developers" => count(s.id)})
     |> order_by([s], desc: count(s.id))
   end
 
@@ -64,7 +64,10 @@ defmodule SoSurvey.Queries.Education do
     distinct_ids
     |> subquery()
     |> group_by([s], s.undergrad_major)
-    |> select([s], %{undergrad_major: s.undergrad_major, number_of_developers: count(s.id)})
+    |> select([s], %{
+      "Undergraduate major" => s.undergrad_major,
+      "Number of developers" => count(s.id)
+    })
     |> order_by([s], desc: count(s.id))
   end
 
@@ -91,7 +94,7 @@ defmodule SoSurvey.Queries.Education do
     devs_by_the_same_dev_type
     |> subquery()
     |> group_by([s], s.edu_other)
-    |> select([s], %{ed_other: s.edu_other, number_of_developers: count(s.id)})
+    |> select([s], %{"Non-formal education" => s.edu_other, "Number of developers" => count(s.id)})
     |> order_by([s], desc: count(s.id))
   end
 end
